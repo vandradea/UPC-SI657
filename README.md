@@ -1,20 +1,24 @@
 
-# Course Microservice : Spring Boot & Spring Cloud
+![UPC_logo_transparente](https://user-images.githubusercontent.com/77755041/133364393-4092c362-575e-406f-8f65-47d51247135c.png)
+
+# Curso: Fundamentos de Arquitectura de Software - SI657
+
+## Project: Microservices with Spring Boot & Spring Cloud
 
 ## Requirements
 
 - Java 11 
 - Spring Boot 2
 - Gradle 
-- CURL
-- JQ
-- Docker
+- Postman
 
 ## Services
 
 
 ### Config Service
 http://localhost:8090/customer-service/default
+
+http://user:password@localhost:8090/customer-service/default
 
 ### Discovery  Service (Eureka)
     
@@ -48,10 +52,10 @@ POST
     --header 'Content-Type: application/json' \
     --data-raw '
         {
-            "numberID":"40408083",
-            "firstName": "Luis",
-            "lastName": "rodriguez",
-            "email": "profesor@digitallab.academy",
+            "numberID":"40408074",
+            "firstName": "Victor",
+            "lastName": "Andrade",
+            "email": "docente@upc.edu.pe",
             "photoUrl": "",
             "region": {
                 "id": 1
@@ -87,20 +91,7 @@ POST
         ]
     }'
 
-### Gateway Service 
 
-Customer
-
-    curl -X GET http://localhost:8080/customers    -H 'Accept: application/json' | jq '.'
-
-Products
-
-    curl -X GET http://localhost:8080/products  -H 'Accept: application/json' | jq '.'
-
-
-Invoices
-
-    curl -X GET http://localhost:8080/invoices/1 -H 'Accept: application/json' | jq '.'
 
 
 
